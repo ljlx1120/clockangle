@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clock Angle</title>
+  </head>
+  <body>
+    <form action="/calculate" method="post">
+      <label for="hour">Enter Hour:</label>
+      <input id="hour" name="hour" min="1" max="12" type="number">
+      <label for="min">Enter Minute:</label>
+      <input id="min" name="min" min="0" max="60" type="number">
+      <button type="submit">Calculate</button>
+
+      {% if result is not empty %}
+        {{ result }}
+      {% endif %}
+    </form>
+  </body>
+</html>
